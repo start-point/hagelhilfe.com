@@ -19,19 +19,22 @@
           <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
         <![endif]-->
     </head>
-    <body data-spy="scroll" data-target="#navbar">
-        <section>
+    <body>
+        <div id="map"></div>
+        <section id="TEASER">
             <div class="container">
                 <div id="carousel-example-captions" class="carousel slide" data-ride="carousel">
                     <div class="carousel-inner" role="listbox">
                         <div class="item active">
-                            <img src="css/map.jpg">
+                            <img src="img/slide.gif">
+                            <div class="carousel-caption">
+                                <h3>Sanfte Reparaturmethode</h3>
+                                <p>Ausbeulen, ohne dass Lackieren notwendig wird</p>
+                            </div>
                         </div><!--.item-->
-                    </div>
-                    <div class="left carousel-control"></div>
-                    <div class="right carousel-control"></div>
+                    </div><!--carousel-inner-->
                 </div>
-            </div>
+            </div><!--container-->
         </section>
         <section class="content">
             <div class="container">
@@ -68,7 +71,45 @@
             </ol>
         </div>
     </footer>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
+        <script type="text/javascript">
+            function initMap() {
+                var customMapType = new google.maps.StyledMapType([
+                    {
+                        stylers: [
+                            {hue: '#890000'},
+                            {visibility: 'simplified'},
+                            {gamma: 0.5},
+                            {weight: 0.5}
+                        ]
+                    },
+                    {
+                        elementType: 'labels',
+                        stylers: [{visibility: 'off'}]
+                    },
+                    {
+                        featureType: 'water',
+                        stylers: [{color: '#890000'}]
+                    }
+                ], {
+                    name: 'Custom Style'
+                });
+                var customMapTypeId = 'custom_style';
+
+                var map = new google.maps.Map(document.getElementById('map'), {
+                    zoom: 3,
+                    center: {lat: 40.674, lng: -73.946},  // Brooklyn.
+                    mapTypeControlOptions: {
+                        mapTypeIds: [google.maps.MapTypeId.ROADMAP, customMapTypeId]
+                    }
+                });
+
+                map.mapTypes.set(customMapTypeId, customMapType);
+                map.setMapTypeId(customMapTypeId);
+            }
+
+        </script>
+        <script async defer
+                src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBZygThzU64YdKNRzNfCALlxd-7-R_R86c&callback=initMap">
+        </script>
     </body>
 </html>
