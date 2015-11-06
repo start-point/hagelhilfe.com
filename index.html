@@ -19,17 +19,17 @@
           <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
         <![endif]-->
     </head>
-    <body>
+    <body id="LANDING">
         <div id="map"></div>
         <section id="TEASER">
             <div class="container">
-                <div id="carousel-example-captions" class="carousel slide" data-ride="carousel">
-                    <div class="carousel-inner" role="listbox">
+                <div class="slide">
+                    <div class="carousel-inner">
                         <div class="item active">
                             <img src="img/slide.gif">
                             <div class="carousel-caption">
-                                <h3>Sanfte Reparaturmethode</h3>
-                                <p>Ausbeulen, ohne dass Lackieren notwendig wird</p>
+                                <h3>Gentle repair method</h3>
+                                <p>Bulging, without varnishing is necessary</p>
                             </div>
                         </div><!--.item-->
                     </div><!--carousel-inner-->
@@ -42,44 +42,42 @@
                     <span>hagelhilfe GmbH</span>
                     <a href="tel:+4969274015821" class="tel btn btn-primary">
                         <span class="glyphicon glyphicon-earphone" aria-hidden="true"></span>&nbsp;
-                        +49 (0)69 274015821
-                    </a> 
-                   
+                        +49 (0)69 27 40 15-821
+                    </a>
+
                 </h1>
                 <p class="lead">
                     Management of car hail damage
                 </p>
-                <div class="btn-group btn-group-justified" role="group" aria-label="...">
-                    <a href="html/de/index.html" class="btn btn-default" title="Germany">DE</a>
-                    <a href="html/de/index.html" class="btn btn-default" title="Spain">ES</a>
-                    <a href="html/de/index.html" class="btn btn-default" title="Great Britian">EN</a>
-                    <a href="html/de/index.html" class="btn btn-default" title="Italy">IT</a>
-                    <a href="html/de/index.html" class="btn btn-default" tille="Poland">PL</a>
-                    <a href="html/de/index.html" class="btn btn-default" tille="Portugal">PT</a>
-                    <a href="html/de/index.html" class="btn btn-default" title="Czech Republic">CZ</a>
-                </div>
-                <hr>
+                <ul class="nav nav-pills">
+                    <li><a href="html/de/index.html" title="Germany">DE</a></li>
+                    <li><a href="html/de/index.html" title="Spanish">ES</a></li>
+                    <li><a href="html/de/index.html" title="Italy">IT</a></li>
+                    <li><a href="html/de/index.html" title="Polish">PL</a></li>
+                    <li><a href="html/de/index.html" title="Portuguese">PT</a></li>
+                    <li><a href="html/de/index.html" title="Czech">CZ</a></li>
+                    <li><a href="html/en/index.html" title="Great Britian">EN</a></li>
+                    <li><a href="html/en/index.html">Select your country of origin or the one nearest you by clicking the flag</a></li>
+                </ul>
                 <p>
-                    Select your country of origin or the one nearest you by clicking the flag
+
                 </p>
             </div><!--container-->
         </section>
-    <footer>
-        <div class="container">
-            <ol class="breadcrumb">
-                <li>&copy; hagelhilfe 2015</li>
-            </ol>
-        </div>
-    </footer>
+        <footer>
+            <div class="container">
+                <ol class="breadcrumb">
+                    <li>&copy; hagelhilfe 2015</li>
+                </ol>
+            </div>
+        </footer>
         <script type="text/javascript">
             function initMap() {
                 var customMapType = new google.maps.StyledMapType([
                     {
                         stylers: [
-                            {hue: '#890000'},
-                            {visibility: 'simplified'},
-                            {gamma: 0.5},
-                            {weight: 0.5}
+                            {color:'#0088D0'},
+                            {visibility: 'simplified'}
                         ]
                     },
                     {
@@ -88,7 +86,10 @@
                     },
                     {
                         featureType: 'water',
-                        stylers: [{color: '#890000'}]
+                        stylers: [
+                          {color: '#005181'},
+                          {visibility: 'simplified'}
+                        ]
                     }
                 ], {
                     name: 'Custom Style'
@@ -97,12 +98,9 @@
 
                 var map = new google.maps.Map(document.getElementById('map'), {
                     zoom: 3,
-                    center: {lat: 40.674, lng: -73.946},  // Brooklyn.
-                    mapTypeControlOptions: {
-                        mapTypeIds: [google.maps.MapTypeId.ROADMAP, customMapTypeId]
-                    }
+                    center: {lat: 50.110922, lng: 8.682127},  // Frankfurt am Main
+                     disableDefaultUI: true,
                 });
-
                 map.mapTypes.set(customMapTypeId, customMapType);
                 map.setMapTypeId(customMapTypeId);
             }
@@ -111,5 +109,7 @@
         <script async defer
                 src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBZygThzU64YdKNRzNfCALlxd-7-R_R86c&callback=initMap">
         </script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+        <script src="../../js/bootstrap.min.js"></script>
     </body>
 </html>

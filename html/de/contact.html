@@ -54,15 +54,16 @@
                 </ul>
             </div>
             </div>
-        </nav>  
+        </nav>
         <section id="TEASER">
             <div class="container">
-                <div id="carousel-example-captions" class="carousel slide" data-ride="carousel">
-                    <div class="carousel-inner" role="listbox">
+                <div class="slide">
+                    <div class="carousel-inner">
                         <div class="item active">
-                            <img src="../../img/foto-hagel-auto-01.jpg">
-                        </div><!--.item-->
-                    </div><!--carousel-inner-->
+                            <img src="../../img/slide.gif">
+                              <div id="map"></div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
@@ -70,18 +71,20 @@
             <div class="container">
                 <h1>Kontakt</h1>
                     <div id="hcard-hagelhilfe" class="vcard">
-                        <h2>Adresse</h2>
+                        <h2>Deutschland</h2>
                         <h3 class="org">hagelhilfe GmbH</h3>
-                        <p class="adr">
-                            <span class="street-address">Mainzer Landstrasse 50</span><br/>
-                            <span class="postal-code">60235</span> <span class="locality">Frankfurt am Main</span><br/>
-                            <span class="country-name">Deutschland</span>
-                        </p>
-                        <p>
-                            Mail: <a class="email" href="mailto: info@hagelhilfe.com">info@hagelhilfe.com</a><br>
-                            Tel.: <a href="tel:+4969274015821" class="tel">+49 (0)69 274015821</a><br>
-                            Fax.: <a href="fax:+4969274015821" class="fax">+49 (0)69 274015111</a>
-                        </p>
+                        <div class="row">
+                          <p class="adr col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                              <span class="street-address">Mainzer Landstrasse 50</span><br/>
+                              <span class="postal-code">60235</span> <span class="locality">Frankfurt am Main</span><br/>
+                              <span class="country-name">Deutschland</span>
+                          </p>
+                          <p class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                              Mail: <a class="email" href="mailto: info@hagelhilfe.com">info@hagelhilfe.com</a><br>
+                              Tel.: <a href="tel:+4969274015821" class="tel">+49 (0)69 274015821</a><br>
+                              Fax.: <a href="fax:+4969274015821" class="fax">+49 (0)69 274015111</a>
+                          </p>
+                      </div>
                     </div>
             </div><!--.container-->
         </section>
@@ -133,7 +136,7 @@
                         <a href="http://www.wellensiek.de" class="list-group-item" target="_blank" title="Rechtliche Beratung">Wellensiek Rechtsberatung</a>
                         <a href="http://www.audatex.de" class="list-group-item" target="_blank" title="Kalkulationssoftware ">Audatex</a>
                     </div>
-                </div>                
+                </div>
             </div><!--.row-->
             <ol class="breadcrumb">
                 <li>&copy; hagelhilfe 2015</li>
@@ -142,6 +145,46 @@
             </ol>
         </div>
     </footer>
+    <script type="text/javascript">
+        function initMap() {
+            var customMapType = new google.maps.StyledMapType([
+                {
+                    stylers: [
+                        {hue:'#0088D0'},
+                        {visibility: 'on'}
+                    ]
+                },
+                {
+                    elementType: 'labels',
+                    stylers: [{visibility: 'off'}]
+                },
+                {
+                    featureType: 'water',
+                    stylers: [
+                      {color: '#005181'},
+                      {visibility: 'simplified'}
+                    ]
+                }
+            ], {
+                name: 'Custom Style'
+            });
+            var customMapTypeId = 'custom_style';
+            var myLatLng = {lat: 50.1109175, lng: 8.664216}; // Frankfurt am Main
+            var map = new google.maps.Map(document.getElementById('map'), {
+                zoom: 15,
+                center: myLatLng
+            });
+            var marker = new google.maps.Marker({
+            position: myLatLng,
+            map: map,
+            title: 'Hagelhilfe GmbH'
+          });
+        }
+
+    </script>
+    <script async defer
+            src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBZygThzU64YdKNRzNfCALlxd-7-R_R86c&callback=initMap">
+    </script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
     <script src="../../js/bootstrap.min.js"></script>
     </body>
