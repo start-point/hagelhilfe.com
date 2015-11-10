@@ -7,8 +7,8 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
         <meta name="apple-mobile-web-app-status-bar-style" content="black">
         <meta name="author" content="Hagelhilfe gmbH">
-        <meta name="description" content="Management von Hagelschäden">
-        <meta name="keywords" content="Hagelschaden, Reperatur">
+        <meta name="description" content="Management of car hail damage">
+        <meta name="keywords" content="hail, damage, repair">
         <title>hagelhilfe - Contact</title>
         <link href="../../css/bootstrap.min.css" rel="stylesheet">
         <link href="../../css/bootstrap-theme-hagelhilfe.css" rel="stylesheet">
@@ -37,12 +37,7 @@
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">EN <span class="caret"></span></a>
                         <ul class="dropdown-menu">
                             <li><a href="../de/index.html" title="German"><span>DE</span></a></li>
-                            <li><a href="../cz/index.html" title="Czech"><span>CZ</span></a></li>
                             <li><a href="../en/index.html" title="English"><span>EN</span></a></li>
-                            <li><a href="../es/index.html" title="Spanish"><span>SP</span></a></li>
-                            <li><a href="../it/index.html" title="Italy"><span>IT</span></a></li>
-                            <li><a href="../pl/index.html" title="Polish"><span>PL</span></a></li>
-                            <li><a href="../pt/index.html" title="Portuguese"><span>PT</span></a></li>
                         </ul>
                     </li>
                 </ul>
@@ -57,32 +52,35 @@
         </nav>
         <section id="TEASER">
             <div class="container">
-                <div id="carousel-example-captions" class="carousel slide" data-ride="carousel">
-                    <div class="carousel-inner" role="listbox">
+                <div class="slide">
+                    <div class="carousel-inner">
                         <div class="item active">
-                            <img src="../../img/foto-hagel-auto-01.jpg">
-                        </div><!--.item-->
-                    </div><!--carousel-inner-->
+                            <img src="../../img/slide.gif">
+                              <div id="map"></div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
         <section class="content">
             <div class="container">
                 <h1>Contact</h1>
-                    <div id="hcard-hagelhilfe" class="vcard">
-                        <h2>Address</h2>
-                        <h3 class="org">hagelhilfe GmbH</h3>
-                        <p class="adr">
-                            <span class="street-address">Mainzer Landstrasse 50</span><br/>
-                            <span class="postal-code">60235</span> <span class="locality">Frankfurt am Main</span><br/>
-                            <span class="country-name">Deutschland</span>
-                        </p>
-                        <p>
-                            Mail: <a class="email" href="mailto: info@hagelhilfe.com">info@hagelhilfe.com</a><br>
-                            Tel.: <a href="tel:+4969274015821" class="tel">+49 (0)69 274015821</a><br>
-                            Fax.: <a href="fax:+4969274015821" class="fax">+49 (0)69 274015111</a>
-                        </p>
-                    </div>
+                <div id="hcard-hagelhilfe" class="vcard">
+                    <h2>Germany</h2>
+                    <h3 class="org">hagelhilfe GmbH</h3>
+                    <div class="row">
+                      <p class="adr col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                          <span class="street-address">Mainzer Landstrasse 50</span><br/>
+                          <span class="postal-code">60235</span> <span class="locality">Frankfurt am Main</span><br/>
+                          <span class="country-name">Deutschland</span>
+                      </p>
+                      <p class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                          Mail: <a class="email" href="mailto: info@hagelhilfe.com">info@hagelhilfe.com</a><br>
+                          Tel.: <a href="tel:+4969274015821" class="tel">+49 (0)69 274015821</a><br>
+                          Fax.: <a href="fax:+4969274015821" class="fax">+49 (0)69 274015111</a>
+                      </p>
+                  </div>
+              </div>
             </div><!--.container-->
         </section>
     <footer>
@@ -142,6 +140,46 @@
             </ol>
         </div>
     </footer>
+    <script type="text/javascript">
+        function initMap() {
+            var customMapType = new google.maps.StyledMapType([
+                {
+                    stylers: [
+                        {hue:'#0088D0'},
+                        {visibility: 'on'}
+                    ]
+                },
+                {
+                    elementType: 'labels',
+                    stylers: [{visibility: 'off'}]
+                },
+                {
+                    featureType: 'water',
+                    stylers: [
+                      {color: '#005181'},
+                      {visibility: 'simplified'}
+                    ]
+                }
+            ], {
+                name: 'Custom Style'
+            });
+            var customMapTypeId = 'custom_style';
+            var myLatLng = {lat: 50.1109175, lng: 8.664216}; // Frankfurt am Main
+            var map = new google.maps.Map(document.getElementById('map'), {
+                zoom: 15,
+                center: myLatLng
+            });
+            var marker = new google.maps.Marker({
+            position: myLatLng,
+            map: map,
+            title: 'Hagelhilfe GmbH'
+          });
+        }
+
+    </script>
+    <script async defer
+            src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBZygThzU64YdKNRzNfCALlxd-7-R_R86c&callback=initMap">
+    </script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
     <script src="../../js/bootstrap.min.js"></script>
     </body>
