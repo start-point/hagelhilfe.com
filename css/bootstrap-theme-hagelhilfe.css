@@ -63,14 +63,18 @@ ul li {
     list-style-position: outside;
 
 }
-dt {
+.dl-horizontal dt {
     color: rgb(22,139,205);
+    width: 100px;
+}
+.dl-horizontal dd {
+    margin-left: 120px;
 }
 .thumbnail {
     border-radius: 0;
 }
 mark {
-    background: rgba(22,139,205,0.3);
+    background: rgba(22,139,205,0.1);
 }
 abbr.service {
     position: relative;
@@ -127,15 +131,17 @@ body#LANDING #TEASER {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+    min-height: 300px;
+
 }
 #CARDEALER .carousel {
     background-image: url(../img/foto-hagel-auto-01.jpg);
 }
 #CARLOGISTIC .carousel {
-    background-image: url(../img/foto-hagel-auto-02.jpg);
+    background-image: url(../img/foto-hagel-auto-01.jpg);
 }
 #CARINSURER .carousel {
-    background-image: url(../img/foto-hagel-auto-03.jpg);
+    background-image: url(../img/foto-hagel-auto-01.jpg);
 }
 .carousel-control {
     width: 20px;
@@ -346,6 +352,14 @@ footer i {
     width: 100%;
     height: 100%;
     display: block;
+}
+@media (max-width:390px){
+  #SUBNAV .thumb {
+    text-align: center;
+  }
+  #SUBNAV .thumb i {
+    display: none;
+  }
 }
 @media (min-width:768px){
     #TAB {
