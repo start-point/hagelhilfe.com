@@ -114,6 +114,9 @@ abbr.service {
     color: rgb(22,139,205);
     background-color:white;
 }
+#navbar {
+	padding-bottom: 10px;
+}
 .navbar-toggle.collapsed {
     border: 0px;
 }
@@ -244,12 +247,12 @@ body#LANDING #TEASER {
     left: -15px;
     margin-top: -5px;
     margin-right: 5px;
-    height: 40px;
+    height: 30px;
     width: 30px;
     float: left;
 }
-.navbar-default > li a{
-    height: 50px;
+.navbar-default a {
+    height: 40px !important;
 }
 .dropdown.open > a,
 .navbar-default li.active a {
