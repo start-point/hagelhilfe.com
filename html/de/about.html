@@ -9,7 +9,7 @@
         <meta name="author" content="Hagelhilfe gmbH">
         <meta name="description" content="Management von Hagelschäden">
         <meta name="keywords" content="Hagelschaden, Reperatur">
-        <title>hagelhilfe - Autologistiker</title>
+        <title>hagelhilfe</title>
         <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
         <link rel="icon" href="favicon.ico" type="image/x-icon">
         <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -21,7 +21,7 @@
           <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
         <![endif]-->
     </head>
-    <body data-spy="scroll" data-target="#navbar"  id="CARLOGISTIC">
+    <body data-spy="scroll" data-target="#navbar">
         <nav class="navbar navbar-default navbar-fixed-top" id="navbar" role="banner">
             <div class="container">
                 <div class="navbar-header">
@@ -32,31 +32,32 @@
                         <span class="icon-bar"></span>
                     </button>
                     <a class="navbar-brand" href="index.html">hagelhilfe</b></a>
-            </div>
-            <div class="collapse navbar-collapse bs-navbar-collapse">
-                <ul class="nav navbar-nav">
-                    <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">DE <span class="caret"></span></a>
-                        <ul class="dropdown-menu">
-                          <li><a href="#" title="German"><span>DE</span></a></li>
-                          <li><a href="http://www.hagelhilfe.com/html/en/carlogistic.html" title="English"><span>EN</span></a></li>
-                        </ul>
-                    </li>
-                </ul>
-                <ul class="nav navbar-nav navbar-right">
+                </div>
+                <div class="collapse navbar-collapse bs-navbar-collapse">
+                    <ul class="nav navbar-nav">
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">DE <span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                              <li><a href="#" title="German"><span>DE</span></a></li>
+                              <li><a href="http://www.hagelhilfe.com/html/en/about.html" title="English"><span>EN</span></a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <ul class="nav navbar-nav navbar-right">
+                            <li class="active">
+                                <a href="about.html" title="Über uns">Über uns</a>
+                            </li>
+                            <li>
+                                <a href="facts.html" title="Fakten">Fakten</a>
+                            </li>
                         <li>
-                            <a href="about.html" title="Über uns">Über uns</a>
+                            <a href="contact.html" title="Kontakt">Kontakt</a>
                         </li>
                         <li>
-                            <a href="facts.html" title="Fakten">Fakten</a>
+                        		<a href="imprint.html" title="Impressum">Impressum</a>
                         </li>
-                    <li>
-                        <a href="contact.html" title="Kontakt">Kontakt</a>
-                    </li>
-                    <li>
-                    		<a href="imprint.html" title="Impressum">Impressum</a>
-                    </li>
-                </ul>            </div>
+                    </ul>
+                </div>
             </div>
         </nav>
         <section id="TEASER">
@@ -64,6 +65,13 @@
                 <div id="carousel-example-captions" class="carousel slide" data-ride="carousel">
                     <div class="carousel-inner" role="listbox">
                         <div class="item active">
+                            <img src="img/slide.gif">
+                            <div class="carousel-caption">
+                                <h3>Sanfte Reparaturmethode</h3>
+                                <p>Ausbeulen, ohne dass Lackieren notwendig wird</p>
+                            </div>
+                        </div><!--.item-->
+                        <div class="item">
                             <img src="img/slide.gif">
                             <div class="carousel-caption">
                                 <h3>Flächendeckende Organisation</h3>
@@ -83,7 +91,7 @@
                                 <h3>Qualitätsgarantie</h3>
                                 <p>Qualitätsmanagement mit eigener Lichtstrasse</p>
                             </div>
-                        </div><!--.item-->
+                            </div><!--.item-->
                         <div class="item">
                             <img src="img/slide.gif">
                             <div class="carousel-caption">
@@ -95,17 +103,10 @@
                             <img src="img/slide.gif">
                             <div class="carousel-caption">
                                 <h3>Kapazitäten</h3>
-                                <p>Volumen: in der Spitze bis zu 30 Fahrzeuge / Tag</p>
+                                <p>Volumen: in der Spitze bis zu 30 Fahrzeuge pro Tag</p>
                             </div>
                         </div><!--.item-->
-                        <div class="item">
-                            <img src="img/slide.gif">
-                             <div class="carousel-caption">
-                                <h3>Best Price Garantie</h3>
-                                <p>Volumenabhängige Rabattierung auf das Auftragsvolumen</p>
-                            </div>
-                        </div><!--.item-->
-                    </div><!--.carousel-inner-->
+                    </div><!--carousel-inner-->
                     <a class="left carousel-control" href="#carousel-example-captions" role="button" data-slide="prev">
                         <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
                         <span class="sr-only">Previous</span>
@@ -116,7 +117,7 @@
                     </a>
                 </div>
                 <div id="SUBNAV" class="row">
-                    <a class="thumb col-lg-2 col-md-3 col-sm-3 col-xs-4" href="carinsurer.html" title="Versicherungen">
+                    <a class="thumb active col-lg-2 col-md-3 col-sm-3 col-xs-4" href="carinsurer.html" title="Versicherungen">
                         <i class="material-icons">&#xE32A;</i>
                         <p title="Prozessoptimierung im Schadenmanagement Bereich PKW Hagelschäden">Versicherungen</p>
                     </a>
@@ -124,77 +125,48 @@
                         <i class="material-icons">&#xE0AF;</i>
                         <p title="Instandsetzung von PKW Hagelschäden vor Ort">Autologistiker</p>
                     </a>
-                    <a class="thumb col-lg-2 col-md-3 col-sm-3 col-xs-4" href="cardealer.html" title="Autohäuser">
+                    <a class="thumb active col-lg-2 col-md-3 col-sm-3 col-xs-4" href="cardealer.html" title="Autohäuser">
                         <i class="material-icons">&#xE8D1;</i>
                         <p title="Instandsetzung von PKW Hagelschäden vor Ort">Autohäuser</p>
                     </a>
                 </div>
-            </div>
+            </div><!--container-->
         </section>
         <section class="content">
             <div class="container">
+                <h1>
+                    <span>hagelhilfe GmbH</span>
+                    <a href="tel:+4969274015821" class="tel btn btn-primary">
+                        +49 (0)69 27 40 15-821
+                    </a>
+                </h1>
+                <h2></h2>
+                <!--<h2>Begutachtung &amp; Instandsetzung</h2>-->
+                <div class="row">
+                    <div class="col-lg-4 col-md-6 col-sm-12 col-xs-12">
+                        <p>Unser Schwerpunkt ist die PKW Hagelschaden Begutachtung und Instandsetzung nach der sogenannten sanften Reparaturmethode (Ausbeulen ohne, dass Lackieren notwendig wird).
+                        </p><p>Damit ist es möglich, <mark>99% aller PKW Hagelschäden kostengünstig</mark> und mit einer Reparaturzeit von <mark>maximal einem Tag</mark> in den Original Zustand zu bringen. 
+                        </p>
+                        <p>Für die Instandsetzungsarbeiten benötigen wir lediglich trockene und überdachte Arbeitsplätze vor Ort.
+                        </p>
+                        
 
-                        <h1>
-                            <span>Autologistiker</span>
-                            <a href="tel:+4969274015821" class="tel btn btn-primary"> +49 (0)69 27 40 15-821</a>
-                        </h1>
-                        <h2></h2>
-                        <div class="row">
-                            <article class="tab col-lg-4 col-md-6 col-sm-12">
-                                <h3>Flächendeckende Organisation</h3>
-                                <ul>
-                                    <li>Wir sind innerhalb von 24 Stunden mit unseren mehrsprachigen Mitarbeitern vor Ort</li>
-                                    <li>Mobile Infrastruktur (Bürocontainer, Zelte für überdachtes Arbeiten)</li>
-                                    <li>Fachgerechte Instandsetzung (bei Bedarf mit Kombi Reparatur-Lackarbeiten)</li><br>
-                                </ul>
-                            </article>
-                            <article class="tab col-lg-4 col-md-6 col-sm-12">
-                                <h3>Industrialisierte Arbeitsweise (Fließband)</h3>
-                                <ol>
-                                    <li>Demontage</li>
-                                    <li>Instandsetzung</li>
-                                    <li>Endkontrolle vom Auftraggeber </li>
-                                    <li>Remontage</li>
-                                    <li>Fahrzeugreinigung</li>
-                                    <li>Auslieferung</li>
-                                </ol>
-                                <br>
-                                </article>
-                                <article class="tab col-lg-4 col-md-6 col-sm-12">
-                                <h3>Qualitätsgarantie</h3>
-                                <ul>
-                                    <li>Unser Demontageteam ist von den Herstellern an den neusten
-                                        Fahrzeugmodellen geschult</li>
-                                    <li>Ausgebildete und qualifizierte Hagel-Techniker mit langjähriger Berufspraxis</li>
-                                    <li>Qualitätsmanagement mit eigener Lichtstrasse für Endkontrolle</li>
-                                </ul>
-                                </article>
-                              </div>
-                              <div class="row">
-                                <article class="tab col-lg-4 col-md-6 col-sm-12">
-                                <h3>Sicherheit</h3>
-                                <ul>
-                                    <li>Alle Hagel-Techniker verfügen über notwendige
-                                        Arbeitserlaubnisse und Sozialversicherungsnummern</li>
-                                    <li>Betriebshaftpflichtversicherung</li>
-                                </ul>
-                                </article>
-                                <article class="tab col-lg-4 col-md-6 col-sm-12">
-                                <h3>Kapazitäten</h3>
-                                <ul>
-                                    <li>Stützpunkte vor Ort</li>
-                                    <li>Durch einen Verbund bis zu 100 Hagel-Techniker</li>
-                                    <li>Vorlaufzeit 24 Stunden</li>
-                                </ul>
-                                </article>
-                                <article class="tab col-lg-4 col-md-6 col-sm-12">
-                                <h3>Best Price Garantie</h3>
-                                <ul>
-                                    <li>Volumenabhängige Rabattierung auf das Auftragsvolumen</li>
-                                </ul>
-                            </article>
-                        </div>
-									</div><!--.col-->
+                    </div>
+                    <div class="col-lg-4 col-md-6 col-sm-12 col-xs-12">
+                    <p>
+                        Nach einem Unwetter und dem damit verbundenen Hagelereignis arbeiten wir vor Ort in den Hagelgebieten. <mark>Innerhalb von 24h</mark> nach einem Hagelereignis können wir durch unser Mobiles Team mit der PKW Hagelschaden Instandsetzung beginnen, beispielsweise für dringende PKW Auslieferungen.</p>
+                        <p>
+                            Seit vielen Jahren ist die hagelhilfe GmbH in diesem Marktsegment aktiv und verfügt neben einem großen Erfahrungsschatz und spezialisierter Software über eine anerkannte Kompetenz.</p>
+                    </div>
+                    <div class="col-lg-4 col-md-6 col-sm-12 col-xs-12">
+                       <p>
+                           Die hagelhilfe GmbH zählt europaweit zu den Marktführenden Anbietern. <mark>Unsere Reparaturkapazitäten liegen derzeit bei bis zu 20 Fahrzeugen pro Tag</mark> (abhängig vom jeweiligen Schadenbild).
+                        </p>
+                        <p>
+                        Dank unserer flexiblen Strukturen sind wir optimal für die Abwicklung von Großschäden aufgestellt. Wir operieren mit einem festen Technikstamm, über den wir <mark>bis zu 100 Hagel-Techniker</mark> steuern können und uns dadurch jederzeit ausreichend Ressourcen zur Verfügung stehen.
+                       </p>
+                    </div>
+                </div>
                 <hr>
             </div><!--container-->
         </section>
@@ -214,31 +186,31 @@
                         Überzeugen Sie sich von unserer Qualität!
                     </p>
                 </div>
-                <div class="col-md-3 col-sm-3 col-xs-12" id="TARGETGROUP">
-                    <h2 class="hidden">Kunden</h2>
-                </div>
-            </div><!--.row-->
+            <div class="col-md-3 col-sm-3 col-xs-12" id="TARGETGROUP">
+                <h2 class="hidden">Kunden</h2>
+            </div>
+        </div><!--.row-->
             <p class="list-group-item disabled">Partner</p>
             <div class="row">
                 <div class="col-md-2 col-sm-3 col-xs-6">
-                    <a class="thumbnail" href="http://www.gruppofassina.it" target="_blank">
-                        <img src="img/logo-parter-gruppofassina.svg" alt="Logo Partner Gruppo Fassina" title="Gruppo Fassina">
-                    </a>
+                        <a class="thumbnail" href="http://www.gruppofassina.it" target="_blank">
+                            <img src="img/logo-parter-gruppofassina.svg" alt="Logo Partner Gruppo Fassina" title="Gruppo Fassina">
+                        </a>
                 </div>
                 <div class="col-md-2 col-sm-3 col-xs-6">
-                    <a class="thumbnail" href="http://www.carglass.com" class="list-group-item" target="_blank">
-                        <img src="img/logo-parter-carglass.svg" alt="Logo Partner Carglass" title="Carglass">
-                    </a>
+                        <a class="thumbnail" href="http://www.carglass.com" class="list-group-item" target="_blank">
+                            <img src="img/logo-parter-carglass.svg" alt="Logo Partner Carglass" title="Carglass">
+                        </a>
                 </div>
                 <div class="col-md-2 col-sm-3 col-xs-6">
-                    <a class="thumbnail" href="http://www.dekra.com" class="list-group-item" target="_blank">
-                        <img src="img/logo-parter-dekra.svg" alt="Logo Partner Dekra" title="Dekra">
-                    </a>
+                        <a class="thumbnail" href="http://www.dekra.com" class="list-group-item" target="_blank">
+                            <img src="img/logo-parter-dekra.svg" alt="Logo Partner Dekra" title="Dekra">
+                        </a>
                 </div>
                 <div class="col-md-2 col-sm-3 col-xs-6">
-                    <a class="thumbnail" href="http://www.europcar.com" class="list-group-item" target="_blank">
-                        <img src="img/logo-parter-europcar.svg" alt="Logo Partner Europcar" title="Europcar">
-                    </a>
+                        <a class="thumbnail" href="http://www.europcar.com" class="list-group-item" target="_blank">
+                            <img src="img/logo-parter-europcar.svg" alt="Logo Partner Europcar" title="Europcar">
+                        </a>
                 </div>
                 <div class="col-md-2 col-sm-3 col-xs-6">
                         <a class="thumbnail" href="http://www.audatex.de" class="list-group-item" target="_blank">
@@ -253,13 +225,12 @@
             </div><!--.row-->
             <ol class="breadcrumb">
                 <li>&copy; hagelhilfe 2015</li>
-                <li><a href="index.html">Startseite</a></li>
-                <li class="active">Leistungen</li>
+                <li class="active">Startseite</li>
             </ol>
         </div>
     </footer>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-<script src="js/bootstrap.min.js"></script>
-<script src="js/hagelhilfe.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/hagelhilfe.js"></script>
     </body>
 </html>

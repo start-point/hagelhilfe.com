@@ -10,6 +10,8 @@
         <meta name="description" content="Management von Hagelschäden">
         <meta name="keywords" content="Hagelschaden, Reperatur">
         <title>hagelhilfe</title>
+        <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+        <link rel="icon" href="favicon.ico" type="image/x-icon">
         <link href="css/bootstrap.min.css" rel="stylesheet">
         <link href="css/bootstrap-theme-hagelhilfe.css" rel="stylesheet">
         <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
@@ -28,8 +30,8 @@
                         <div class="item active">
                             <img src="img/slide.gif">
                             <div class="carousel-caption">
-                                <h3>Gentle repair method</h3>
-                                <p>Bulging, without varnishing is necessary</p>
+                                <h3>PDR</h3>
+                                <p>Paintless Dent Repair ... Worldwide</p>
                             </div>
                         </div><!--.item-->
                     </div><!--carousel-inner-->
@@ -41,7 +43,6 @@
                 <h1>
                     <span>hagelhilfe GmbH</span>
                     <a href="tel:+4969274015821" class="tel btn btn-primary">
-                        <span class="glyphicon glyphicon-earphone" aria-hidden="true"></span>&nbsp;
                         +49 (0)69 27 40 15-821
                     </a>
 
@@ -50,9 +51,9 @@
                     Management of car hail damage
                 </p>
                 <ul class="nav nav-pills">
-                    <li><a class="btn btn-secondary" href="html/de/index.html" title="Germany">DE</a></li>
-                    <li><a class="btn btn-primary" href="html/en/index.html" title="Great Britian">EN</a></li>
-                    <li><a href="html/en/index.html">Select your country of origin or the one nearest you by clicking the flag</a></li>
+                    <li><a class="btn btn-secondary" href="html/de/index.html" title="Deutsch">DE</a></li>
+                    <li><a class="btn btn-primary" href="html/en/index.html" title="English">EN</a></li>
+                    <li><a href="html/en/index.html">Select your language</a></li>
                 </ul>
                 <p>
 
@@ -62,49 +63,11 @@
         <footer>
             <div class="container">
                 <ol class="breadcrumb">
-                    <li>&copy; hagelhilfe 2015</li>
+                    <li>&copy; hagelhilfe 2016</li>
+                    <li><a href="#" onclick="window.open('https://www.sitelock.com/verify.php?site=www.hagelhilfe.com','SiteLock','width=600,height=600,left=160,top=170');"><img title="1&1 SiteLock" src="https://shield.sitelock.com/shield/www.hagelhilfe.com" alt="Homepage-Sicherheit"></a>
+                    </li>
                 </ol>
             </div>
         </footer>
-        <script type="text/javascript">
-            function initMap() {
-                var customMapType = new google.maps.StyledMapType([
-                    {
-                        stylers: [
-                            {color:'#0088D0'},
-                            {visibility: 'simplified'}
-                        ]
-                    },
-                    {
-                        elementType: 'labels',
-                        stylers: [{visibility: 'off'}]
-                    },
-                    {
-                        featureType: 'water',
-                        stylers: [
-                          {color: '#005181'},
-                          {visibility: 'simplified'}
-                        ]
-                    }
-                ], {
-                    name: 'Custom Style'
-                });
-                var customMapTypeId = 'custom_style';
-
-                var map = new google.maps.Map(document.getElementById('map'), {
-                    zoom: 3,
-                    center: {lat: 50.110922, lng: 8.682127},  // Frankfurt am Main
-                     disableDefaultUI: true,
-                });
-                map.mapTypes.set(customMapTypeId, customMapType);
-                map.setMapTypeId(customMapTypeId);
-            }
-
-        </script>
-        <script async defer
-                src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBZygThzU64YdKNRzNfCALlxd-7-R_R86c&callback=initMap">
-        </script>
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-        <script src="../../js/bootstrap.min.js"></script>
     </body>
 </html>
